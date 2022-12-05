@@ -1,0 +1,225 @@
+$main-color: #EB6440;
+$second-color: #497174;
+$thrid-color: #D6E4E5;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $thrid-color !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+ul {
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// start filter section
+.filter {
+
+    .title-filter {
+        color: $second-color;
+    }
+
+    .line-filter {
+        margin-top: 30px;
+        border-bottom: 2px solid $second-color;
+        padding-bottom: 15px;
+
+        .btns-filter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            
+
+            .btn-filter {
+                border: 1px solid $main-color;
+                border-radius: 25px;
+                padding: 5px 30px;
+                color: #EB6440;
+                font-size: 16px;
+                font-weight: 500;
+                background-color: transparent;
+
+                &.active-filter {
+                    background-color: $main-color;
+                    color: white;
+                    border: none;
+                }
+            }
+        }
+
+        .radio-boxs {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            span {
+                color: $second-color;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .radio-box-items {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .input-item {
+                    label {
+                        font-size: 17px;
+                        font-weight: 500;
+                        color: $second-color;
+                    }
+
+                    input[type="radio"] {
+                        accent-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+// end filter section
+
+// start main-content
+.main-content {
+    .charts-line {
+        .line-check-boxs {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid $second-color;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            padding: 0 10px;
+    
+            .ckeck-box {
+                label {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: $second-color;
+                }
+    
+                input[type="checkbox"] {
+                    accent-color: $main-color;
+                }
+            }
+    
+            span {
+                font-size: 18px;
+                font-weight: 500;
+                color: $second-color;
+            }
+        }
+    
+        .buttons-charts {
+            button {
+                border: none;
+                background-color: $second-color;
+                color: white;
+                font-size: 14px;
+                font-weight: 500;
+                padding: 8px 30px;
+                border-radius: 8px;
+                transition: 0.3s;
+    
+                &:hover {
+                    background-color: #497174c9;
+                }
+            }
+    
+            button:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .links {
+        margin-top: 30px;
+        
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $second-color;
+            cursor: pointer;
+            
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            svg {
+                width: 25px;
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 19px;
+            }
+        }
+    }
+
+        
+
+    .line {
+        margin-top: 60px;
+        width: 100%;
+        height: 13px;
+        border-radius: 10px;
+        background-color: #49717463;
+        position: relative;
+
+        .line-progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            background-color: $second-color;
+            border-radius: 10px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $second-color;
+            }
+        }
+    }
+
+    .video {
+        max-width: 100%;
+    }
+}
+// end main-content
